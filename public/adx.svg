@@ -1,0 +1,8 @@
+<svg width="300" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Grua de Origami -->
+    <path d="M3 2.5L9 9l3 12 2-7.5 7.5-2-9-2L3 2.5z"/>
+    <path d="M9 9l3-3 2 2 7.5 2M9 9l-5 5 7.5-2M21.5 11L15 15l-1 6-3-4-4-2"/>
+    
+    <!-- Iniciais ADx -->
+    <text x="25" y="20" font-family="Arial" font-size="8" fill="black" font-weight="bold">ADx</text>
+</svg>

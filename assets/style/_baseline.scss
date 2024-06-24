@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    background-color: #f7faff;
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    box-sizing: border-box;
+    position: relative;
+    scroll-behavior: smooth;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+
+    @include print {
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+}
+
+a {
+    color: #000;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

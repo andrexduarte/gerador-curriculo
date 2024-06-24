@@ -1,0 +1,139 @@
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 30px;
+
+    @include print {
+        padding: 0;
+    }
+}
+
+.main {
+    display: flex;
+
+    @include breakpoint(sm) {
+        flex-wrap: wrap;
+    }
+}
+
+.form-content {
+    width: 25%;
+    padding-left: 40px;
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: 0;
+    position: fixed;
+    left: 0;
+
+    .the-header {
+        margin-bottom: 48px;
+    }
+
+    .form {
+        padding-right: 20px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 200px;
+        width: 100%;
+        z-index: -1;
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        padding: 0 15px;
+        overflow-y: hidden;
+        height: auto;
+        position: relative;
+    }
+}
+
+.curriculo-content {
+    width: 50%;
+    position: relative;
+    padding: 1rem;
+    max-width: 800px;
+    z-index: 1;
+    margin: 100px auto 100px 35%;
+
+    &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 99%;
+        height: 99%;
+        border-radius: 1rem;
+        background: linear-gradient(to right bottom, var(--red), var(--red));
+        transform: rotate(4deg);
+        transform-origin: 40% 70%;
+        box-shadow: inset 0 1px 1px 0 hsla(0,0%,100%,.15), 0 50px 100px -20px hsl(9, 35%, 47%, .3), 0 30px 60px -30px rgba(0,0,0,.5), -10px 10px 60px -10px rgba(103,178,111,.3);
+        
+        @include print {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 99%;
+        height: 99%;
+        border-radius: 1rem;
+        background: linear-gradient(to right bottom, var(--red-light), var(--red-light));
+        transform: rotate(7deg);
+        transform-origin: 40% 70%;
+        box-shadow: inset 0 1px 1px 0 hsla(0,0%,100%,.15), 0 50px 100px -20px hsl(9, 35%, 47%, .3), 0 30px 60px -30px rgba(0,0,0,.5), -10px 10px 60px -10px rgba(103,178,111,.3);
+        
+        @include print {
+            display: none;
+        }
+    }
+
+    @include breakpoint(sm) {
+        width: 100%;
+        width: 0;
+        height: 0;
+    }
+
+            
+    @include print {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.curriculo {
+    box-shadow: inset 0 1px 1px 0 hsla(0,0%,100%,.15), 0 50px 100px -20px rgba(50,50,93,.3), 0 30px 60px -30px rgba(0,0,0,.5), -10px 10px 60px -10px rgba(103,178,111,.3);
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem 1rem .5rem;
+
+    @include print {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+
+.state-zero {
+
+    ul {
+
+        li {
+            font-size: 12px;        
+
+        }
+    }
+
+}

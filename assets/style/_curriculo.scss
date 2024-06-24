@@ -1,0 +1,245 @@
+.curriculo {
+    //padding: 0 70px;
+    position: relative;
+    z-index: 5;
+
+    @include breakpoint(sm) {
+        padding: 0 15px;
+    }
+    
+    &-wrap {
+        background-color: white;
+        overflow: hidden;
+    }
+
+    &-header {
+        background-color: hsla(9, 35%, 47%, .4);
+        padding: 30px 20px 35px;
+        color: #000;
+        text-align: center;
+        position: relative;
+
+        h1 {
+            margin: 0 auto;
+            font-family: var(--title-font);
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .subtitle-url {
+            margin: 0 0 25px 0;
+            font-size: 12px;
+        }
+    }
+
+    .icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+        fill: #fff;
+    }
+
+    .contacts {
+        position: absolute;
+        border-top: 1px solid #FFF;
+        font-size: 10pt;
+        margin: 0 -20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        font-style: normal;
+        padding: 10px 0;
+
+        span {
+            display: flex;
+        }
+    }
+
+    &-main {
+        padding: 20px 30px;
+
+        h3 {
+            font-size: 16pt;
+            margin: 0 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        p {
+            font-size: 12pt;
+            margin: 0;
+            line-height: 1.6em;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 13pt;
+        }
+
+        .nomarginbottom {
+            margin-bottom: 10px;
+
+            p {
+                margin-bottom: 0;
+                font-size: 11pt;
+                color: rgba(0, 0, 0, 0.6);
+                line-height: 1.3em;
+            }            
+        }
+
+        .exp-profissional {
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+    }
+
+    .reverse-order {
+
+        .exp-profissional:first-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .exp-empresa,
+    .exp-periodo,
+    .exp-cidade {
+        font-size: 11pt;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 1.3em;
+    }
+}
+
+.idade {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+// Modelos
+.model1 {
+
+    h1 {
+        margin: 0;
+        width: 100%;
+
+        + .subtitle {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .curriculo-wrap {
+        display: flex;
+        position: relative;
+    }
+
+    .curriculo-header {
+        background-color: hsla(9, 35%, 47%, 0.4);
+        padding: 30px 20px 35px;
+        color: #000;
+        text-align: center;
+        position: relative;
+        width: 34%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        text-align: left;
+
+
+        @include print {
+    
+            &::after {
+                content: "";
+                background-color: hsla(9, 35%, 47%, 0.4);
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 34%;
+                position: fixed;
+                z-index: -1;
+                padding: 30px 8px 35px 0;
+            }
+        }
+
+        .box {
+            margin-bottom: 15px;
+
+            h3 {
+                margin: 0 0 4px;
+            }
+
+            h4 {
+                font-size: 12pt;
+                margin: 0;
+            }
+
+            p {
+                font-size: 11pt;
+                margin: 0;
+            }
+
+            .url {
+                color: rgba(0, 0, 0, 0.6);
+                margin: 0 0 4px;
+            }
+        }
+    }
+
+    .curriculo-main {
+        padding: 20px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        flex-direction: column;
+
+        @include print {
+            width: 65%;
+        }
+    }
+
+    .curriculo-header {
+        h1,
+        .subtitle {
+            display: none;
+        }
+    }
+
+    .contacts {
+        position: relative;
+        border-top: 0 none;
+        font-size: 12pt;
+        margin: 0 0 20px;
+        width: 100%;
+        display: flex;
+        font-style: normal;
+        padding: 0;
+        gap: 15px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    .subtitle-url {
+        font-size: 12pt;
+    }
+
+    h3 {
+        margin: 0 0 5px;
+    }
+    
+    .contacts span {
+        display: flex;
+
+        .icon {
+            padding-top: 3px;
+
+        }
+    }
+}
