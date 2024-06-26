@@ -89,7 +89,7 @@ import { ref, onMounted, watch } from 'vue';
 
 let formStore
 
-if (import.meta.env.SSR) {
+if (!import.meta.env.SSR) {
   formStore = useFormStore();
 }
 
