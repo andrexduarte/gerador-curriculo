@@ -1,14 +1,15 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  ssr: true,
-  experimental: {
-      payloadExtraction: false
+  devtools: { enabled: false },
+  app: {
+    baseURL: '/gerador-de-curriculo-profissional/',
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    },
   },
-  router: {
-      options: {
-          strict: false
-      }
-  },
+
+  ssr: false,
+
   modules: ['@formkit/nuxt'],
   formkit: {
     // Experimental support for auto loading (see note):
@@ -22,11 +23,4 @@ export default defineNuxtConfig({
     // SCSS file in the project
     "~/assets/style/main.scss", // you should add main.scss somewhere in your app
   ],
-  app: {
-    head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-    },
-    baseURL: '/gerador-de-curriculo-profissional/'
-  },
 })

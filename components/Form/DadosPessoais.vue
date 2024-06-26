@@ -32,7 +32,7 @@
     <div class="input-group3">
       <FormKit
         type="date"
-        value="1988-00-00"
+        value="yyyy-MM-dd"
         label="Data Nascimento"
         v-model="form.datanascimento"
         placeholder="dd/mm/aaaa"
