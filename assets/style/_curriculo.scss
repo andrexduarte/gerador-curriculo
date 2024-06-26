@@ -4,7 +4,7 @@
     z-index: 5;
 
     @include breakpoint(sm) {
-        padding: 0 15px;
+        padding: 0;
     }
     
     &-wrap {
@@ -53,9 +53,22 @@
         align-items: flex-end;
         font-style: normal;
         padding: 10px 0;
+        box-sizing: border-box;
+
+        @include breakpoint(sm) {
+            padding: 8px 10px;
+        }
 
         span {
             display: flex;
+
+            @include breakpoint(sm) {
+                display: inline-block;
+                width: 33%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
     }
 
