@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
-    baseURL: '/gerador-de-curriculo-profissional/',
+    baseURL: '/gerador-curriculo/',
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
