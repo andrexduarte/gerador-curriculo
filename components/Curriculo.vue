@@ -89,8 +89,8 @@ import { ref, onMounted, watch } from 'vue';
 
 let formStore
 
-if (process.client) {
-  formStore = useFormStore()
+if (import.meta.env.SSR) {
+  formStore = useFormStore();
 }
 
 const months = [
@@ -103,8 +103,6 @@ const formatDate = (dateString) => {
   const [year, month] = dateString.split('-');
   return `${months[parseInt(month) - 1]} de ${year}`;
 };
-
-
 
 const calculateDuration = (start, end) => {
   if (!start || !end) return '';
