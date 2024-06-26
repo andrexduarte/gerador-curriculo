@@ -6,7 +6,7 @@
                 <img src="https://andrexduarte.github.io/adx/img/icon-passaro.png" alt="ilustração de uma página construida">
                 © Todos direitos reservados.<br>
                 Feito com NuxtJs.
-                <NuxtLink to="https://andrexduarte.github.io/adx/" target="_blank">André Duarte</NuxtLink> 2024.
+                <NuxtLink :to="`${ $authorUrl }`"  target="_blank">{{ $author }}</NuxtLink> 2024.
             </small>
         </div>
     </footer>

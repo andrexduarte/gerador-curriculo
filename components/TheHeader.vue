@@ -2,9 +2,7 @@
   <header class="the-header">
     <hgroup class="title-group">
       <h1>
-        Gerador de<br>
-        Currículo<br>
-        Profissional
+        {{ $title }}
       </h1>
     </hgroup>
   </header>
