@@ -79,8 +79,6 @@
     </article>
   </div>
 
-  <PrintButton />
-
 </template>
 
 <script setup>

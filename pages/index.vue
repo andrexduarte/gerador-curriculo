@@ -17,6 +17,7 @@
             <SwitchTemplate @switch="switchTemplate" />
         </main>
         <TheFooter />
+        <PixModal />
     </div>
 </template>
 

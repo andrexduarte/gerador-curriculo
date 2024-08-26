@@ -24,6 +24,9 @@
 
       <!-- Portfolio -->
       <FormPortfolio />
+
+      <PrintButton />
+
     </form>
   </div>
 </template>
