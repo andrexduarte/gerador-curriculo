@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura/colorpicker';
+import ColorPickerStyle from 'primevue/colorpicker/style';
 export default defineNuxtConfig({
   devtools: { enabled: false },
 
@@ -11,7 +13,7 @@ export default defineNuxtConfig({
   },
 
   ssr: false,
-  modules: ['@formkit/nuxt', 'nuxt-gtag'],
+  modules: ['@formkit/nuxt', 'nuxt-gtag', '@primevue/nuxt-module'],
 
   formkit: {
     // Experimental support for auto loading (see note):
@@ -24,12 +26,20 @@ export default defineNuxtConfig({
 
   plugins: [
     { src: '~/plugins/vue-the-mask.js' },
-    { src: '~/plugins/config-content.js' }
+    { src: '~/plugins/config-content.js' },
+    { src: '~/plugins/primevue.js' }
   ],
-
+  // primevue: {
+  //   options: {
+  //     unstyled: true
+  //   },
+  //   components: {
+  //     prefix: 'Prime',
+  //     include: ['ColorPicker'],    /* Used as <PrimeButton /> and <PrimeDataTable /> */
+  //   }
+  // },
   css: [
-    // SCSS file in the project
-    "~/assets/style/main.scss", // you should add main.scss somewhere in your app
+    "~/assets/style/main.scss",
   ],
 
   compatibilityDate: '2024-08-26',

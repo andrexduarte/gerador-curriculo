@@ -11,6 +11,10 @@
     }
 }
 
+@mixin color-primary($opacity: 1) {
+  background-color: rgba(var(--yellow), $opacity);
+}
+
 @mixin opacity($percent) {
   -moz-opacity: $percent / 100;
   -khtml-opacity: $percent / 100;

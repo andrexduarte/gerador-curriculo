@@ -25,14 +25,14 @@
     margin: 0;
 
     h1 {
-        font-size: 55px;
+        font-size: 45px;
         margin: 0 0 0;
         text-transform: uppercase;
         font-family: var(--title-font);
         letter-spacing: -1px;
         font-weight: 700;
-        color: #FFF;
-        line-height: 1em;
+        color: #000;
+        line-height: 1.3em;
 
         a {
             text-decoration: none;
@@ -67,4 +67,8 @@
         width: 100%;
         max-width: 538px;
     }
+}
+
+mark {
+    background-color: #fff;
 }

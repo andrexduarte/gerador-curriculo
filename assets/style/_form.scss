@@ -75,7 +75,7 @@
     textarea {
         border: 0 none;
         font-size: 16px;
-        background-color: hsla(9, 35%, 47%, .1);
+        background-color: rgba(var(--yellow), .1);
         padding: 12px 10px;
         width: 100%;
         box-sizing: border-box;
@@ -154,9 +154,10 @@ position: relative;
 font-weight: 600;
 height: 42px;
 transition: .4s all ease;
+overflow: hidden;
 
     &::after {
-        background: var(--red) url(~/assets/images/plus.svg) center no-repeat;
+        background: var(--primary-color) url(~/assets/images/plus.svg) center no-repeat;
         background-size: 14px 14px;
         content: "";
         width: 42px;
@@ -169,13 +170,13 @@ transition: .4s all ease;
 
     &:hover {
         &::after {
-            opacity: .6;
+            background-color: var(--primary-color-hover);
         }
     }
 }
 
 .bt-remove {
-    background: var(--red) url(~/assets/images/trash.svg) center no-repeat;
+    background: var(--primary-color) url(~/assets/images/trash.svg) center no-repeat;
     background-size: 14px 14px;
     height: 42px;
     width: 42px;
@@ -188,7 +189,7 @@ transition: .4s all ease;
     transition: .4s all ease;
 
     &:hover {
-        opacity: .6;
+        background-color: var(--primary-color-hover);
     }
 }
 

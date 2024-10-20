@@ -1,5 +1,5 @@
 <template>
-  <header class="curriculo-header">
+  <header class="curriculo-header" :style="{ backgroundColor: formattedColor }">
     <h1>{{ formStore.form.nome ? formStore.form.nome : 'Seu nome' }}</h1>
     <p class="subtitle">{{ formStore.form.cargo ? formStore.form.cargo : 'Cargo Desejado' }}</p>
     <p class="subtitle-url">{{ formStore.form.url }}</p>
@@ -32,6 +32,19 @@
 import { useFormStore } from '~/stores/form'
 import ContactInfo from './ContactInfo.vue'
 import AddressInfo from './AddressInfo.vue'
+import { useColorStore } from '~/stores/color'
+import { computed } from 'vue'
+
+const colorStore = useColorStore()
+
+const selectedColor = computed(() => colorStore.selectedColor)
+
+// Adiciona # se não estiver presente
+const formattedColor = computed(() => {
+  const color = selectedColor.value
+  console.log(color)
+  return color.startsWith('#') ? color : `#${color}`
+})
 
 const formStore = useFormStore()
 </script>

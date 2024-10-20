@@ -8,13 +8,13 @@
         <main class="main">
             <section class="form-content">
                 <TheHeader />
+                <SwitchTemplate @switch="switchTemplate" />
                 <Formulario />
             </section>
             <section class="curriculo-content">
                 <component :is="currentTemplateComponent" :key="currentTemplateComponent" />
             </section>
 
-            <SwitchTemplate @switch="switchTemplate" />
         </main>
         <TheFooter />
         <PixModal />

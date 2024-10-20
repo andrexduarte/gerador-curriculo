@@ -1,14 +1,19 @@
 
 :root {
-
+    --p-colorpicker-preview-width: 38px;
+    --p-colorpicker-preview-height: 38px;
     --white: #ffffff;
 
-    --yellow: #F4B216;
+
+
+    --yellow: 253, 209, 0;
     --blue: #57C6D4;
     --red-light: #F06541;
     --red: hsl(9, 35%, 47%);
 
-    --primary-color: var(--red);
+    --primary-color: rgb(var(--yellow));
+    --primary-color-hover: rgba(var(--yellow), .8);
+
     --text-color: #000;
 
     --primary-font: "PT Sans", sans-serif;

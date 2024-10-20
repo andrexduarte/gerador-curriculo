@@ -2,7 +2,7 @@
   <div class="curriculo model1" v-if="formStore">
     <article class="curriculo-wrap" id="curriculoContent">
       <!-- Dados Pessoais -->
-      <header class="curriculo-header">
+      <header class="curriculo-header" :style="{ backgroundColor: formattedColor }">
         <h3>
           Contatos
         </h3>
@@ -114,6 +114,18 @@
 <script setup>
 import { useFormStore } from '~/stores/form'
 import { ref, onMounted, watch } from 'vue';
+import { useColorStore } from '~/stores/color'
+import { computed } from 'vue'
+
+const colorStore = useColorStore()
+
+const selectedColor = computed(() => colorStore.selectedColor)
+
+// Adiciona # se não estiver presente
+const formattedColor = computed(() => {
+  const color = selectedColor.value
+  return color.startsWith('#') ? color : `#${color}`
+})
 
 let formStore
 

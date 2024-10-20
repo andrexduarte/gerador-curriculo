@@ -3,7 +3,7 @@
     <form>
       <!-- Dados Pessoais -->
       <FormDadosPessoais />
-
+      
       <!-- Resumo Profissional -->
       <FormResumoProfissional />
 
@@ -34,6 +34,7 @@
 <script setup>
 import { useFormStore } from '~/stores/form'
 import { onMounted } from 'vue'
+
 
 let formStore = useFormStore()
 

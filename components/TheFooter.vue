@@ -13,6 +13,10 @@
 </template>
 
 <style lang="scss">
+    .the-footer {
+        padding-left: 22%;
+    }
+    
     .license {
         display: block;
         margin: 0 0 48px 0;

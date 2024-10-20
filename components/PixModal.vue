@@ -130,8 +130,8 @@ export default {
 }
 
 .close-button {
-  background-color: hsla(9, 35%, 47%, 1);
-  color: white;
+  background-color: var(--primary-color);
+  color: #000;
   padding: 10px 15px 10px 15px;
   text-align: center;
   font-size: 16px;
@@ -154,7 +154,7 @@ export default {
 }
 
 button:hover {
-  background-color: hsla(9, 35%, 47%, .9);
+  background-color: var(--primary-color-hover);
 }
 
 .button-icon {
