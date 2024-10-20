@@ -1,7 +1,9 @@
+@use 'mixins' as *;
+
 html {
     scroll-behavior: smooth;
-
 }
+
 body {
     background-color: #f7faff;
     color: var(--text-color);
@@ -12,12 +14,7 @@ body {
     -webkit-print-color-adjust:exact !important;
     print-color-adjust:exact !important;
 
-    @include print {
-        &::after,
-        &::before {
-            display: none;
-        }
-    }
+
 }
 
 a {

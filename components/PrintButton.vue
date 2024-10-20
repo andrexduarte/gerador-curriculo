@@ -13,6 +13,17 @@ import { usePixModalStore } from '~/stores/usePixModalStore'
 
 export default {
   methods: {
+    handleButtonClick() {
+      // Disparar o evento do Google Analytics
+      this.$gtag.event('click', {
+        event_category: 'PDF Generation',
+        event_label: 'Gerar PDF Button',
+        value: this.clickCount
+      })
+
+      // Mostrar o modal PIX
+      this.showPixModal()
+    },
     showPixModal() {
       const pixModalStore = usePixModalStore()
       pixModalStore.showModal('andrexduarte@gmail.com')
@@ -22,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/style/_mixins.scss';
+@use '~/assets/style/_mixins.scss' as *;
 
 button {
   background-color: var(--primary-color);

@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .the-header {
     background: var(--primary-color);
     

@@ -64,7 +64,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/style/_mixins.scss';
+@use '~/assets/style/_mixins.scss'  as *;
+
 .modal-overlay {
   position: fixed;
   top: 0;

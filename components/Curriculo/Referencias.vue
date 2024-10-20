@@ -11,7 +11,7 @@
         </p>
         <p>
           {{ referencia.email }} 
-          <template v-if="referencia.empresa">|</template> 
+          {{ referencia.email && referencia.telefone ? '|' : '' }}
           {{ referencia.telefone }}
         </p>
       </div>

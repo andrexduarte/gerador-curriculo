@@ -15,8 +15,7 @@
 
 
 <style lang="scss" scoped>
-@import '~/assets/style/_mixins.scss';
-
+@use '~/assets/style/_mixins.scss'  as *;
 
 .switch-template {
   display: flex;

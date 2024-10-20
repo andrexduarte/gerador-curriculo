@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 @media print {
   html, body {
     width: 100%;
